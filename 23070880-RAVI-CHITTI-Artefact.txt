@@ -1,0 +1,148 @@
+
+
+Project Title
+
+
+Design and Empirical Evaluation of an Open-Source SIEM-Based SOC for SMEs Using Wazuh and the Elastic Stack
+
+Student Name: RAVICHANDRAREDDY CHITTI
+Student ID: 23070880
+Supervisor Name: Dr Uchenna Ojiako
+
+
+
+1. Artefact Overview
+
+A completely functional open-source Security Operations Centre (SOC) prototype created especially for small and medium-sized businesses (SMEs) is the object created for this MSc project. The artefact integrates Wazuh with the Elastic Stack (Elasticsearch and Kibana) to enable centralised log collecting, real-time security monitoring, alerting, and visual analysis of endpoint activity.
+
+The artefact shows how SOC functionalities normally associated with commercial Security Information and Event Management (SIEM) solutions can be delivered by combining open-source security tools. With an emphasis on Windows endpoint monitoring, the implementation supports File Integrity Monitoring (FIM), Sysmon's detailed process visibility, and the MITRE ATT&CK framework's behavioural classification.
+
+The main experimental platform utilised to produce the findings examined in the project report is this object.
+
+
+2. Purpose and Relevance
+
+This artefact aims to address a major issue noted in the literature: SMEs frequently lack viable and reasonably priced SOC solutions, despite facing serious cyber dangers. The adoption of commercial SOC and SIEM platforms in SME contexts is often limited due to their cost and operational complexity.
+
+The object shows that:
+
+- Open-source technologies can be used to monitor security effectively.
+
+- It is possible to deploy SOC functionality without incurring license fees.
+
+- Technically, SME-focused, practical security monitoring is possible.
+
+The artefact offers concrete proof to back up the project's goals and research question by creating a functional SOC prototype as opposed to a conceptual design.
+
+
+3. Artefact Components
+
+The artefact consists of the following integrated components:
+
+3.1 Wazuh Manager
+
+The Wazuh Manager acts as the core analysis and detection engine. It receives logs from monitored endpoints, applies detection rules, performs correlation, and generates security alerts. The manager also supports File Integrity Monitoring and MITRE ATT&CK mapping.
+
+3.2 Wazuh Agent (Windows Endpoint)
+
+A Wazuh agent was deployed on a Windows system to collect:
+
+- Windows Security, System, and Application event logs
+
+- Sysmon event logs for detailed process execution and command-line activity
+
+- File and registry changes through File Integrity Monitoring
+
+3.3 Elastic Stack
+
+Elasticsearch is used for indexing and storing alert data, while Kibana provides dashboards and visualisation capabilities. These dashboards enable analysts to explore alert trends, severity distributions, and behavioural patterns.
+
+3.4 Detection Rules and Configuration
+
+Default Wazuh rules were customised and tuned to reduce noise and focus on SME-relevant threats, including persistence mechanisms, privilege misuse, and suspicious command execution.
+
+
+4. Artefact Functionality
+
+The artefact provides the following core functionality:
+
+- Centralised Log Collection: Aggregation of endpoint logs into a single analysis platform
+
+- Real-Time Alerting: Detection of security-relevant events using rule-based logic
+
+- File Integrity Monitoring: Detection of unauthorised file and registry modifications
+
+- Endpoint Visibility: Monitoring of process execution and command-line activity
+
+- Behavioural Classification: Mapping of alerts to MITRE ATT&CK tactics
+
+- Visual Analytics: Dashboard-based analysis of alerts and trends
+
+These capabilities collectively demonstrate SOC-level monitoring suitable for SME environments.
+
+
+5. Use of the Artefact in the Project
+
+The artefact was used throughout the project as the primary experimental environment. Controlled attack simulations and system activities were executed on the monitored endpoint, and the resulting alerts were collected and analysed.
+
+During the evaluation period, the artefact generated:
+
+- 4,463 total security alerts
+
+- 2,559 Windows-related alerts
+
+- 1,898 Sysmon-based alerts
+
+These outputs formed the basis of the quantitative and qualitative analysis presented in the Quality and Results chapter.
+
+
+
+6. Artefact Quality and Reliability
+
+The artefact operated reliably throughout the evaluation period. No data loss, system crashes, or indexing failures were observed. Similar activities consistently produced similar alerts, demonstrating detection stability and repeatability.
+
+The use of open-source tools ensures transparency, while documented configuration steps support reproducibility. These qualities enhance both the academic validity and practical value of the artefact.
+
+
+
+7. Artefact Limitations
+
+Despite its strengths, the artefact has several limitations:
+
+- Evaluation was limited to a single Windows endpoint
+
+- Network-level telemetry (e.g., firewall logs) was not included
+
+- Detection relies primarily on rule-based techniques
+
+These limitations are acknowledged and discussed in the Evaluation and Conclusion section of the project report.
+
+
+
+
+8. Artefact Availability and Reusability
+
+The artefact is fully reproducible using publicly available open-source software. With appropriate configuration, it can be reused or extended for:
+
+- Multi-endpoint SOC deployments
+
+- SME security monitoring pilots
+
+- Training and demonstration purposes
+
+The artefact provides a strong foundation for future research or practical SOC development.
+
+
+
+9. Summary
+
+In summary, the artefact produced for this MSc project is a functional, reliable, and practical open-source SOC prototype. It demonstrates that SMEs can achieve meaningful security monitoring without reliance on expensive commercial platforms. The artefact directly supports the project’s research objectives and represents a significant technical contribution.
+
+
+
+
+
+
+
+
+
