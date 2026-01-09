@@ -1,4 +1,9 @@
 # open-source-soc-wazuh-elastic
+
+Note: All system screenshots, dashboards, and alert evidence
+are included in the MSc project report PDF.
+
+
 MSc project: Design and Empirical Evaluation of an Open-Source SIEM-Based SOC for SMEs using Wazuh and the Elastic Stack
 This repository contains my MSc Advanced Computer Science project.
 
